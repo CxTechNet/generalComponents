@@ -1,0 +1,36 @@
+/* grid.css */
+@media screen and (min-width: 600px) {
+    .grid__container {
+        margin-left: 6em;
+    }
+}
+
+.grid__container {
+    display: grid;
+    gap: 16px;
+    margin-top: 2em;
+    padding: 16px;
+    align-items: space-evenly;
+    justify-content: space-evenly;
+    animation: 0.2s linear;
+}
+
+.grid__item {
+    background-color: #ddd;
+    color: black;
+    height: 100%;
+    text-align: center;
+    border-radius: 8px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.full-width {
+    max-width: calc(100% - 16px);
+    /* Ajusta o tamanho máximo com o gap */
+    width: 100%;
+    /* Garante que o item ocupe toda a largura disponível */
+}

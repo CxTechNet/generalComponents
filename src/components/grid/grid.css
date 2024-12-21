@@ -7,6 +7,7 @@
 
 .grid__container {
     display: grid;
+    position: relative;
     gap: 16px;
     margin-top: 2em;
     padding: 16px;
@@ -16,16 +17,44 @@
 }
 
 .grid__item {
-    background-color: #ddd;
+    position: relative;
+    /* Definir o contêiner com posição relativa */
     color: black;
     height: 100%;
     text-align: center;
-    border-radius: 8px;
+    border-radius: 16em;
     box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.2s ease;
+}
+
+.grid__background {
+    position: absolute;
+    /* Fundo deve ser absoluto em relação ao item */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.2);
+    filter: blur(2px);
+    z-index: 1;
+    border-radius: 16px;
+    /* Garantir que o fundo fique atrás do conteúdo */
+}
+
+.grid__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 .full-width {

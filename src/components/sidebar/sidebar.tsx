@@ -1,17 +1,11 @@
 import './sidebar.css'
-import { useState } from 'react'
 import logo from './logo.svg'
 
-function Sidebar() {
-
-  const [active, setActive] = useState(1);
-  const changeActive = (id: number) => {
-    if (active === id) {
-      setActive(0);
-      return;
-    } 
-    setActive(id);
-  }
+interface SidebarProps {
+  active: number;
+  changeActive: (id: number) => void;
+}
+function Sidebar({active, changeActive}: SidebarProps) {
 
   const items = [
     { id: 1, name: 'Home', link: '/', icon: 'fa fa-home' },

@@ -1,0 +1,179 @@
+/* Para telas maiores, como PC ou tablet (min-width: 600px) */
+@media (min-width: 600px) {
+    .sidebar {
+        position: fixed;
+        display: flex;
+        border-radius: 5em;
+        left: 2em;
+        bottom: 2em;
+        overflow: hidden;
+
+        top: 2em;
+        width: 4em;
+        /* Largura da sidebar */
+        flex-direction: column;
+        /* Sidebar vertical */
+        justify-content: space-between;
+        padding: 1.5em 0;
+    }
+
+    .sidebar__background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #242424;
+        filter: blur(40px);
+    }
+
+    .sidebar__content {
+        display: flex;
+        flex-direction: column;
+        /* Itens dispostos em coluna */
+        justify-content: space-between;
+        flex-grow: 1;
+        z-index: 2;
+    }
+
+    .sidebar__logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 3em;
+    }
+
+    .sidebar__menu {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        flex-grow: 1;
+        justify-content: flex-start;
+    }
+
+    .sidebar button {
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 1.2em;
+        cursor: pointer;
+        padding: 0.5em 1em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.2s linear;
+        box-sizing: border-box;
+    }
+
+    .sidebar button:hover,
+    .sidebar button.active {
+        background: linear-gradient(to right, #333, #333 0%);
+        transition: 0.2s linear;
+        padding-left: 1em;
+    }
+
+    .sidebar__menu button:hover,
+    .sidebar__menu button.active {
+        border-left: solid 2px #fff;
+    }
+
+    .sidebar__footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2em;
+    }
+
+    .sidebar__footer button {
+        border-radius: 1em;
+        width: 2em;
+        height: 2em;
+    }
+}
+
+/* Para telas menores, como dispositivos móveis (max-width: 600px) */
+@media screen and (max-width: 600px) {
+    .sidebar {
+        position: fixed;
+        left: 2em;
+        border-radius: 5em;
+        bottom: 2em;
+        overflow: hidden;
+        display: flex;
+
+        padding-block: 1em;
+        padding-inline: 1em;
+        right: 2em;
+        flex-direction: row;
+        height: 2em;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .sidebar__background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #242424;
+        filter: blur(40px);
+    }
+
+    .sidebar__content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        z-index: 2;
+    }
+
+    .sidebar__logo {
+        display: none;
+    }
+
+    .sidebar__menu {
+        display: flex;
+        flex-direction: row;
+        gap: 1em;
+        flex-grow: 1;
+        justify-content: flex-start;
+    }
+
+    .sidebar button {
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 1.2em;
+        cursor: pointer;
+        padding: 1em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.2s linear;
+        box-sizing: border-box;
+    }
+
+    .sidebar button.active {
+        background: linear-gradient(to right, #333, #333 0%);
+        transition: 0.2s linear;
+        padding-left: 1em;
+    }
+
+    .sidebar__menu button.active {
+        border-bottom: solid 2px #fff;
+    }
+
+    /* Alinhamento do footer */
+    .sidebar__footer {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-self: flex-end;
+        margin-top: auto;
+    }
+
+    .sidebar__footer button {
+        border-radius: 1em;
+    }
+}

@@ -9,7 +9,7 @@ interface GridProps {
   rowSize: string;
 }
 
-const Container: React.FC<GridProps> = ({ numColumns, numRows, columnSize, rowSize }) => {
+const ContainerColumns: React.FC<GridProps> = ({ numColumns, numRows, columnSize, rowSize }) => {
   const gridTemplateColumns = `repeat(${numColumns}, ${columnSize})`;
   const gridTemplateRows = `repeat(${numRows}, ${rowSize})`;
 
@@ -22,16 +22,17 @@ const Container: React.FC<GridProps> = ({ numColumns, numRows, columnSize, rowSi
         gridAutoRows: rowSize,
       }}
     >
-      <GridItem spanColumns={2} numColumns={numColumns}>
+      {/* Passando minWidth para os GridItems específicos */}
+      <GridItem spanColumns={2}>
         <div className="grid__item">1</div>
-      </GridItem >
-      <GridItem numColumns={numColumns}/>
+      </GridItem>
       <GridItem />
-      <GridItem spanColumns={5} spanRows={2} numColumns={numColumns}/>
-      <GridItem numColumns={numColumns}/>
-      <GridItem numColumns={numColumns}/>
+      <GridItem />
+      <GridItem spanColumns={5} spanRows={2} />
+      <GridItem />
+      <GridItem />
     </div>
   );
 };
 
-export default Container;
+export default ContainerColumns;

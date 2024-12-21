@@ -16,6 +16,7 @@ const GridItem: React.FC<GridItemProps> = ({ spanColumns = 1, spanRows = 1, chil
     >
       <div className="grid__background"></div>
       <div className="grid__content">{children}</div>
+      {children}
     </div>
   );
 };

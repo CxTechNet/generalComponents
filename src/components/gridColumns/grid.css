@@ -59,7 +59,5 @@
 
 .full-width {
     max-width: calc(100% - 16px);
-    /* Ajusta o tamanho máximo com o gap */
     width: 100%;
-    /* Garante que o item ocupe toda a largura disponível */
 }

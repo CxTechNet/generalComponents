@@ -1,4 +1,8 @@
-/* Para telas maiores, como PC ou tablet (min-width: 600px) */
+.sidebar,
+.sidebar * {
+    transition: all 0.2s ease-in-out;
+}
+
 @media (min-width: 600px) {
     .sidebar {
         position: fixed;

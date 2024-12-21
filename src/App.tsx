@@ -11,7 +11,7 @@ function App() {
   };
 
   const items = [
-    { numRows: 2, numColumns: 2, id: 'Item 1', content: 'Conteúdo' },
+    { numRows: 2, numColumns: 6, id: 'Item 1', content: 'Conteúdo' },
     { numRows: 1, numColumns: 1, id: 'Item 2' },
     { numRows: 1, numColumns: 1, id: 'Item 3' },
     { numRows: 1, numColumns: 1, id: 'Item 4' },
@@ -29,8 +29,8 @@ function App() {
     <>
       <Sidebar changeActive={changeActive} active={active} />
       <ContainerSize
-        cardWidth="200px"
-        cardHeight="200px"
+        cardWidth="200"
+        cardHeight="200"
         items={items}
         />
     </>

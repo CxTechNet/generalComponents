@@ -9,6 +9,7 @@ interface GridItemProps {
 }
 
 const GridItem: React.FC<GridItemProps> = ({ numRows, numColumns, children, maxGridColumns }) => {
+    // const width = numColumns;
     const width = Math.min(numColumns, maxGridColumns);
   return (
     <div

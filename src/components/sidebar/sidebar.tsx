@@ -4,14 +4,11 @@ import logo from './logo.svg'
 interface SidebarProps {
   active: number;
   changeActive: (id: number) => void;
+  items: { id: number, name: string, link: string, icon: string }[]
 }
-function Sidebar({active, changeActive}: SidebarProps) {
+function Sidebar({active, changeActive, items}: SidebarProps) {
 
-  const items = [
-    { id: 1, name: 'Home', link: '/', icon: 'fa fa-home' },
-    { id: 2, name: 'Search', link: '/search', icon: 'fa fa-search' },
-    { id: 3, name: 'Settings', link: '/settings', icon: 'fa fa-cog' },
-  ]
+
 
   return (
     <>

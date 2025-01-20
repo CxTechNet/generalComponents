@@ -30,7 +30,6 @@ const ContainerSize: React.FC<ContainerSizeProps> = ({ cardWidth, cardHeight, it
         };
       }, []);
     
-      // Calcula o valor máximo para gridColumn com base no vw
       const maxGridColumns = Math.floor(vw / Number(cardWidth)) - 1;
   return (
     <div
